@@ -50,7 +50,7 @@ var versions = []struct {
 
 func TestCompareVersions(t *testing.T) {
 	for _, v := range versions {
-		if r := CompareVersions(v.a, v.b); r != v.r {
+		if r := Compare(v.a, v.b); r != v.r {
 			t.Errorf("compareVersions(%q, %q): %d != %d", v.a, v.b, r, v.r)
 		}
 	}
